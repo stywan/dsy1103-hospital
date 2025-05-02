@@ -1,6 +1,7 @@
 package com.hospital_vm.cl.hospital_vm.service;
 
 import com.hospital_vm.cl.hospital_vm.dto.AtencionReporteDTO;
+import com.hospital_vm.cl.hospital_vm.dto.MedicoReporteDTO;
 import com.hospital_vm.cl.hospital_vm.model.Atencion;
 import com.hospital_vm.cl.hospital_vm.model.Medico;
 import com.hospital_vm.cl.hospital_vm.model.Paciente;
@@ -44,5 +45,9 @@ public class AtencionService {
 
     public List<AtencionReporteDTO> listarAtencionesPorPaciente(int pacienteId) {
         return atencionRepository.findAtencionesByPacienteId(pacienteId);
+    }
+
+    public List<MedicoReporteDTO> listarAtencionesPorMedico(int medicoId) {
+        return atencionRepository.findAtencionesByMedicoId(medicoId);
     }
 }
